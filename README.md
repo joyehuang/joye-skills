@@ -14,7 +14,7 @@ Build a self-contained, single-file HTML slide deck in a distinctive **cyan-on-n
 
 The output is always **one HTML file** — no build step, opens in any browser. You bring the content; the skill brings the look. It's the same visual language as [joyehuang.me](https://joyehuang.me).
 
-→ [`skills/terminal-slide-deck`](skills/terminal-slide-deck)
+→ [View rendered demo](https://joyehuang.github.io/joye-skills/skills/terminal-slide-deck/references/demo-reference.html) · [`skills/terminal-slide-deck`](skills/terminal-slide-deck) · [demo source](skills/terminal-slide-deck/references/demo-reference.html)
 
 ---
 
