@@ -20,29 +20,27 @@ The output is always **one HTML file** — no build step, opens in any browser. 
 
 ## Install
 
-These skills install with the [`skill`](https://www.npmjs.com/package/skill) CLI. Point it at this repo via `SKILL_BASE_URL`:
+Install with the [`skills`](https://skills.sh) CLI ([skills.sh](https://skills.sh)) — it auto-detects your agent (Claude Code, Cursor, Codex, …) and copies the skill in:
 
 ```bash
-SKILL_BASE_URL=https://github.com/joyehuang/joye-skills/tree/main \
-  npx skill skills/terminal-slide-deck
+# install all skills in this repo
+npx skills add joyehuang/joye-skills
+
+# or just one, into Claude Code
+npx skills add joyehuang/joye-skills --skill terminal-slide-deck -a claude-code
 ```
 
-That downloads the skill into `.codebuddy/skills/terminal-slide-deck`.
-
-### Using with Claude Code
-
-To use as a [Claude Code skill](https://docs.claude.com/en/docs/claude-code/skills), drop the folder into your skills directory instead:
+Handy variants:
 
 ```bash
-# project-level
-git clone https://github.com/joyehuang/joye-skills /tmp/joye-skills
-cp -R /tmp/joye-skills/skills/terminal-slide-deck .claude/skills/
-
-# or user-level (available in every project)
-cp -R /tmp/joye-skills/skills/terminal-slide-deck ~/.claude/skills/
+npx skills add joyehuang/joye-skills --list      # see what's in the repo
+npx skills add joyehuang/joye-skills -g          # install globally (every project)
+npx skills use joyehuang/joye-skills@terminal-slide-deck | claude   # use once, no install
 ```
 
-Then ask Claude for "slides in the terminal style" and the skill triggers.
+The skill lands in `.claude/skills/terminal-slide-deck` (or `~/.claude/skills/` with `-g`). Then ask your agent for "slides in the terminal style" and it triggers.
+
+> Installing via the `skills` CLI is also how this repo gets ranked on [skills.sh](https://skills.sh) — so `npx skills add` is the preferred path. ⭐ the repo if it's useful.
 
 ---
 
