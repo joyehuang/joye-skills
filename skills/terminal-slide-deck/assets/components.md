@@ -1,6 +1,6 @@
 # Component library — copy-paste snippets
 
-The **CSS for every component below already lives in `assets/deck-template.html`**.
+The **CSS for every component below already lives in `references/demo-reference.html`**.
 These are just the HTML blocks to drop into a slide's `.inner`, with `[ … ]`
 placeholders to replace. Keep the class names exactly.
 

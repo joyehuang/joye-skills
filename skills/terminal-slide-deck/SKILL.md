@@ -29,14 +29,17 @@ no build step, no `localStorage`. It opens in any browser, navigates by
 keyboard/touch, goes fullscreen, and respects reduced-motion.
 
 This skill supplies the **look and the building blocks**; the user supplies the
-**content** (any topic, any language). The reusable engine lives in
-`assets/deck-template.html`. **Start from that file — don't rebuild the CSS/JS.**
+**content** (any topic, any language). The reusable engine lives in the
+[demo reference HTML](references/demo-reference.html). **Start from that file —
+don't rebuild the CSS/JS.**
 
 ## What you're reproducing
 A dark, calm, "developer terminal" aesthetic: near-black background with a faint
 cyan glow, monospace eyebrows prefixed `> `, a blinking cyan cursor, hairline
 borders, and **bespoke HTML/SVG visuals** instead of clip-art. Animations are
 deliberate and slow (staggered reveals, sequenced entrances) — never frantic.
+Open the [Demo Reference HTML](references/demo-reference.html) to see the style
+and component behavior in a browser.
 
 ---
 
@@ -51,13 +54,14 @@ Find out (or ask briefly — one message, don't interrogate):
 If the user hands you raw notes, propose a slide breakdown before building.
 
 ### 2. Start from the template
-Copy `assets/deck-template.html` to your working file. Keep the entire `<style>`
-and `<script>` blocks — that's the engine. The 12 demo slides are a **neutral
-example to replace**, and a live gallery of what the components look like.
+Copy `references/demo-reference.html` to your working file. Keep the entire
+`<style>` and `<script>` blocks — that's the engine. The 12 demo slides are a
+**neutral example to replace**, and a live gallery of what the components look
+like.
 
 ### 3. Lay out the slides
 Use the **layout helper classes** (below). **Give every content slide a visual** —
-copy snippets from `references/components.md` (the CSS for each is already in the
+copy snippets from `assets/components.md` (the CSS for each is already in the
 template) or adapt a demo slide in place. Keep section **dividers** clean for
 rhythm. Whenever you add or remove slides, the counter updates itself from the DOM
 (the `#total` span is set by JS), so you don't have to renumber anything.
@@ -121,7 +125,7 @@ The template encodes all of this. Preserve it; don't drift the palette.
 
 ## Component library
 CSS for all of these is already in the template `<style>`. Copy the HTML from
-**`references/components.md`**. Choose by what the content needs:
+**`assets/components.md`**. Choose by what the content needs:
 
 | Component | Use it for |
 |---|---|
@@ -171,5 +175,5 @@ grep -c '</style>' "$f"; grep -c '</script>' "$f"  # exactly 1 each
 ---
 
 ## Files in this skill
-- `assets/deck-template.html` — the engine + a neutral 12-slide demo. Start here.
-- `references/components.md` — copy-paste HTML for each visual component.
+- `references/demo-reference.html` — the engine + a neutral 12-slide demo. Start here.
+- `assets/components.md` — copy-paste HTML for each visual component.
